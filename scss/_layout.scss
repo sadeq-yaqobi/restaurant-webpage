@@ -113,6 +113,7 @@
     url(../images/bg.jpeg) no-repeat center;
   background-size: cover;
   clip-path: ellipse(160% 50% at 50% 48%);
+ 
   &-top {
     width: 100%;
     height: 130px;
@@ -120,6 +121,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width:500px){
+      height: 100px;
+    }
   }
   .brand {
     display: flex;
@@ -133,6 +137,9 @@
     height: calc(100vh - 130px);
     text-align: center;
     padding: 30px 0;
+    @media (max-width:500px){
+      padding: 10px 0;
+    }
   }
 }
 .about-us {
@@ -158,6 +165,9 @@
         center no-repeat;
     background-size: cover;
     transition: all 1s;
+    @media (max-width:500px){
+      height: 70vh;
+    }
     &:hover {
       background: linear-gradient(
           rgba($color-black, 0.7),

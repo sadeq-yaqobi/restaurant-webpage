@@ -155,6 +155,7 @@ a {
   .main-heading {
     font-size: 55px;
     letter-spacing: 10px;
+    margin-bottom: 30px;
   }
 }
 
@@ -456,6 +457,11 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .header-top {
+    height: 100px;
+  }
+}
 .header .brand {
   display: flex;
   align-items: center;
@@ -468,6 +474,11 @@ a {
   height: calc(100vh - 130px);
   text-align: center;
   padding: 30px 0;
+}
+@media (max-width: 500px) {
+  .header-banner {
+    padding: 10px 0;
+  }
 }
 
 .about-us {
@@ -490,6 +501,11 @@ a {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("../images/rustic-chandelier-made-bulbs-ropes-dining-table-vintage-kitchen (1).jpg") center no-repeat;
   background-size: cover;
   transition: all 1s;
+}
+@media (max-width: 500px) {
+  .about-us-right {
+    height: 70vh;
+  }
 }
 .about-us-right:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("../images/rustic-chandelier-made-bulbs-ropes-dining-table-vintage-kitchen (1).jpg") center no-repeat;
