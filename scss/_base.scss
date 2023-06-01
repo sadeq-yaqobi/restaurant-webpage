@@ -37,6 +37,7 @@ $font-nunito: "Nunito", sans-serif;
 
 body {
   background-color: $color-dark;
+  overflow: auto;
 }
 a{
     text-decoration: none;

@@ -1,10 +1,18 @@
 .hamburger-menu{
+  position: fixed;
   width: 40px;
   height: 40px;
-  position: fixed;
   top: 10%;
   right: 5%;
   z-index: 300;
+  @media (max-width: 900px) {
+    width: 35px;
+    height: 35px;
+  }
+  @media (max-width: 500px) {
+    width: 30px;
+    height: 30px;
+  }
   .menu{
     @extend %fullSpace;
     display: flex;
@@ -18,31 +26,65 @@
       background-color: $color-primary;
       transition: all .5s ;
       transform-origin: left;
+      @media (max-width : 900px) {
+        height: 3px;
+      }
+      @media (max-width : 500px) {
+        height: 2px;
+      }
     }
   }
 }
 .logo {
   @include flexLayout;
-  font-size: 60px;
+  font-size: 50px;
   color: $color-primary;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   margin-right: 20px;
   border: 3px solid $color-primary;
   border-radius: 50%;
+  @media (max-width:1056px){
+    font-size: 45px;
+    width: 80px;
+    height: 80px;
+  }
+  @media (max-width:900px){
+    font-size: 38px;
+    width: 65px;
+    height: 65px;
+  }
+  @media (max-width:500px){
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
 }
 .main-name {
   @include textStyle;
   font-family: $font-nunito;
-  font-size: 40px;
+  font-size: 24px;
+  font-weight: 600;
   color: $color-secondary;
+  @media (max-width:1056px){
+    font-size: 22px;
+  }
+  @media (max-width:500px){
+    display: none;
+  }
 }
 .sub-name {
   @include textStyle;
-  font-size: 18px;
+  font-size: 16px;
   font-family: $font-josefinSans;
-  text-align: center;
   color: $color-secondary;
+  @media (max-width:1056px){
+    font-size: 14px;
+  }
+  @media (max-width:500px){
+    display: none;
+  }
 }
 .main-heading {
   font-family: $font-dancingScript;
@@ -51,6 +93,14 @@
   font-weight: 300;
   margin-bottom: 40px;
   letter-spacing: 20px;
+  @media (max-width:1056px){
+    font-size: 85px;
+    letter-spacing: 15px;
+  }
+  @media (max-width:500px){
+    font-size: 55px;
+    letter-spacing: 10px;
+  }
 }
 
 .sub-heading {
@@ -59,9 +109,16 @@
   font-size: 40px;
   font-weight: 300;
   margin-bottom: 80px;
+  text-align: center;
+  @media (max-width:1056px){
+    font-size: 33px;
+  }
+  @media (max-width:500px){
+    font-size: 25px;
+  }
 }
 .main-btn {
-  height: 45px;
+  line-height: 40px;
   font-family: $font-josefinSans;
   font-size: 14px;
   padding: 0 10px;
@@ -73,6 +130,10 @@
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.5s;
+  @media (max-width:500px){
+    font-size: 12px;
+    line-height: 30px;
+  }
   &:hover {
     background-color: $color-primary;
     color: $color-dark;
@@ -84,6 +145,22 @@
   width: calc(100% / 3);
   height: 30vw;
   overflow: hidden;
+  @media(max-width:800px){
+    width: 50%;
+    height: 50vw;
+  }
+  @media(max-width:800px){
+    width: 50%;
+    height: 50vw;
+  }
+  @media(max-width:500px){
+    width: 100%;
+    height: 50vw;
+  }
+  @media(max-width:500px){
+    width: 100%;
+    height: 50vw;
+  }
   &:hover .card-overlay{
     left: 0;
   }
@@ -102,13 +179,25 @@
         font-family: $font-josefinSans;
         font-size: 40px;
         margin-bottom: 50px;
-        @include textStyle
+        @include textStyle;
+        @media (max-width: 1056px) {
+          font-size: 30px;
+        }
+        @media (max-width: 900px) {
+          font-size: 25px;
+        }
     }
     &-paragraph{
         font-family: $font-nunito;
         font-size: 30px;
         margin-bottom: 30px;
-        @include textStyle
+        @include textStyle;
+        @media (max-width: 1056px) {
+          font-size: 20px;
+        }
+        @media (max-width: 900px) {
+          font-size: 18px;
+        }
     }
     &-btn{
         width: 150px;
@@ -126,6 +215,11 @@
         &:hover{
             color: $color-black;
             box-shadow: 0px 0px 20px 8px rgba($color-black,0.2);
+        }
+        @media (max-width: 900px) {
+          font-size: 16px;
+          width: 110px;
+        height: 35px;
         }
     }
   }
