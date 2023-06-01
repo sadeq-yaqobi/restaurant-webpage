@@ -36,6 +36,7 @@ a {
   .hamburger-menu {
     width: 30px;
     height: 30px;
+    top: 5%;
   }
 }
 .hamburger-menu .menu {

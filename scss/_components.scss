@@ -12,6 +12,7 @@
   @media (max-width: 500px) {
     width: 30px;
     height: 30px;
+    top: 5%;
   }
   .menu{
     @extend %fullSpace;
